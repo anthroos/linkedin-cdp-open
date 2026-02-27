@@ -114,8 +114,13 @@ class LinkedInMessages(LinkedInBot):
             text: Message text to type
 
         Returns:
-            base64 PNG screenshot after sending.
+            base64 PNG screenshot after sending, or rate limit message.
         """
+        if self.limiter:
+            if not self.limiter.can_send_message():
+                return "Rate limit reached for messages"
+            self.limiter.wait_if_needed('messages')
+
         # Click on input field
         self._click(input_x, input_y)
         self._human_delay(400, 800)
@@ -127,6 +132,9 @@ class LinkedInMessages(LinkedInBot):
         # Press Enter to send
         self.press_key("Enter")
         self._human_delay(500, 1000)
+
+        if self.limiter:
+            self.limiter.record_message()
 
         return self.take_screenshot()
 
