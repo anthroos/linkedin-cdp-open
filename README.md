@@ -4,6 +4,17 @@
 
 LinkedIn automation toolkit using Chrome DevTools Protocol (CDP). Uses **screenshot-based** interaction with human-like behavior to avoid detection.
 
+## Quick Start
+
+New here? Start with these:
+
+| Document | Description |
+|----------|-------------|
+| **[Setup Guide](SETUP_GUIDE.md)** | Step-by-step installation for beginners (no terminal experience needed) |
+| **[CLAUDE.md](CLAUDE.md)** | Configuration file for Claude Code AI assistant (download to your working folder) |
+| **[Prompts](PROMPT.md)** | Ready-to-use example prompts for candidate sourcing |
+| **[Use Cases](USE_CASES.md)** | Code examples for all supported operations |
+
 ## Disclaimer
 
 > **This tool is for educational and research purposes only.**
@@ -357,8 +368,11 @@ linkedin-cdp-open/
 ├── rate_limiter.py         # Rate limiting & protection
 ├── chrome_debug.sh         # Chrome launcher script
 ├── requirements.txt        # Python dependencies
+├── SETUP_GUIDE.md          # Beginner-friendly installation guide
+├── CLAUDE.md               # Claude Code AI assistant configuration
+├── PROMPT.md               # Example prompts for sourcing
 ├── README.md               # This file
-├── USE_CASES.md            # Usage examples
+├── USE_CASES.md            # Code examples for all operations
 └── LICENSE                 # MIT License
 ```
 
